@@ -14,8 +14,8 @@ import { ViewProvider } from '../shared/components/context/view'
 export default function AppRoutes(){
     return(
         <Router>
-            <ViewProvider>
-                <GameProvider>
+            <GameProvider>
+                <ViewProvider>
                     <Routes>
                         <Route 
                             exact path='/home'
@@ -26,8 +26,8 @@ export default function AppRoutes(){
                             element={<Init/>}
                         />
                     </Routes>
-                </GameProvider>
-            </ViewProvider>
+                </ViewProvider>
+            </GameProvider>
         </Router>
     )
 }

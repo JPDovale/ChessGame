@@ -4,12 +4,11 @@ import React, { useContext } from 'react'
 
 import Board from './components/board'
 
-import { GameContext } from '../../shared/components/context/game/'
-import { ViewContext } from '../../shared/components/context/view'
+import { ViewContext} from '../../shared/components/context/view'
 
 export default function HomePage(){
 
-    const { handleGlowBoard } = useContext(ViewContext)
+    const { handleGlowBoard, populateViewBoard } = useContext(ViewContext)
 
     return(
         <div className='main'>
@@ -17,6 +16,7 @@ export default function HomePage(){
             <button 
                 onClick={()=>{
                     handleGlowBoard()
+                    populateViewBoard()
                 }}
                 className='newGame'
                 children={

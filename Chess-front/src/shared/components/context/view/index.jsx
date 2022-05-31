@@ -1,14 +1,20 @@
-import React, { createContext } from "react";
+import React, { createContext, useContext } from "react";
+
+import { boardPrint } from "../../../../pages/home/components/board/boardPrint/boardPrint";
+import { GameContext } from "../game";
+
 
 export const ViewContext = createContext()
 
 export function ViewProvider(props){
 
+    const {populateBoard} = useContext(GameContext)
+
+   
     function selectSquare(id){
         const selectSquare = document.getElementById(id).classList
 
         if(selectSquare.contains('selected')){
-
             selectSquare.remove('selected')
 
         }else{
@@ -41,12 +47,29 @@ export function ViewProvider(props){
             board.classList.remove('boardGlow')
         }, 2000);
     }
+
+    function populateViewBoard(){
+        
+        populateBoard()
+
+        for (let square = 0; square < boardPrint.length; square++) {
+            const print = boardPrint[square];
+
+            const squareToPiece = document.getElementById(print.id)
+            squareToPiece.classList.add(print.piece)
+            
+            if(print.piece == 'none'){
+                print.piece =''
+            }
+        }
+    }
     
     return(
         <ViewContext.Provider
             value={{
                 selectSquare,
-                handleGlowBoard
+                handleGlowBoard,
+                populateViewBoard
             }}
         >
             {props.children}
