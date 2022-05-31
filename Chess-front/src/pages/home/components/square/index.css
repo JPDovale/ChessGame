@@ -1,0 +1,18 @@
+.square{
+    background-color: rgb(124, 36, 36);
+    border: solid rgba(0, 0, 0, 0.315) 1px;
+    height: 60px;
+    width: 60px;
+}
+
+.square .selectSquare{
+    height: 70px;
+    width: 70px;
+    opacity: 0;
+}
+
+.selected{
+    border: solid red 2px;
+    background-color: rgba(255, 0, 0, 0.562);
+    transition: 500ms;
+}

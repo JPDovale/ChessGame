@@ -1,0 +1,110 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.788), gray, rgba(0, 0, 0, 0.788));
+}
+
+.main .newGame{
+    padding: 10px 40px;
+    margin-top: 40px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 10px black;
+    box-shadow: 1px 1px 10px 3px black;
+    border: none;
+    transition: 500ms;
+}
+
+.main .newGame:hover{
+    background-color: black;
+    text-shadow: 1px 1px 10px rgb(255, 255, 255);
+    box-shadow: 1px 1px 10px 3px rgb(255, 255, 255);
+    color: white;
+}
+
+.blackBishop{
+    background-image: url(../../assets/blackBishop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.blackKing{
+    background-image: url(../../assets/blackKing.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.blackKnight{
+    background-image: url(../../assets/blackKnight.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.blackPawn{
+    background-image: url(../../assets/blackPawn.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.blackQueen{
+    background-image: url(../../assets/blackQueen.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.blackRook{
+    background-image: url(../../assets/blackRook.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.whiteBishop{
+    background-image: url(../../assets/whiteBishop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.whiteKing{
+    background-image: url(../../assets/whiteKing.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.whiteKnight{
+    background-image: url(../../assets/whiteKnight.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.whitePawn{
+    background-image: url(../../assets/whitePawn.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.whiteQueen{
+    background-image: url(../../assets/whiteQueen.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.whiteRook{
+    background-image: url(../../assets/whiteRook.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}

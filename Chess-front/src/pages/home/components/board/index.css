@@ -1,0 +1,39 @@
+.board{
+    border-radius: 20px;
+    display: flex;
+    background-color: #e6e6e6;
+    box-shadow: 1px 1px 50px 9px rgb(0, 0, 0);
+    transition: 1s;
+}
+
+.boardGlow{
+    box-shadow: 1px 1px 50px 3px rgb(255, 255, 255);
+    
+}
+
+#a1, #a3, #a5, #a7, 
+#b2, #b4, #b6, #b8, 
+#c1, #c3, #c5, #c7, 
+#d2, #d4, #d6, #d8,
+#e1, #e3, #e5, #e7, 
+#f2, #f4, #f6, #f8,
+#g1, #g3, #g5, #g7,
+#h2, #h4, #h6, #h8{
+    background-color: rgb(224, 224, 201);
+}
+
+#a1{
+    border-radius: 15px 0px 0px;
+}
+
+#a8{
+    border-radius: 0px 15px 0px 0px;
+}
+
+#h8{
+    border-radius: 0px 0px 15px 0px;
+}
+
+#h1{
+    border-radius: 0px 0px 0px 15px;
+}
