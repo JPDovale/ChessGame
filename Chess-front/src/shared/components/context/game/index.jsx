@@ -32,23 +32,22 @@ export function GameProvider(props){
     }
 
     
-    useEffect(()=>{
-        if(loading == false){
-            console.log(document.getElementById(pieceAndPosition.id).children[0])
+    // useEffect(()=>{
+    //     if(loading === false){
+    //         document.getElementById(pieceAndPosition.id).children[0].classList.remove('hidden')
+    //         movesForPiece(pieceAndPosition)
+    //     }
 
-            document.getElementById(pieceAndPosition.id).children[0].classList.remove('hidden')
-        }
-
-    },[pieceAndPosition])
+    // },[pieceAndPosition])
 
     function selectPieceToMove(id){
-        let pieceAndPosition = board.find(pc=> pc.id == id)
+        let pieceAndPosition = board.find(pc=> pc.id === id)
 
-        if(pieceAndPosition.selected == false){ 
+        if(pieceAndPosition.selected === false){ 
             for (let pieces = 0; pieces < board.length; pieces++) {
                 const piece = board[pieces];
 
-                if(piece.selected == true){
+                if(piece.selected === true){
                     piece.selected = false
                 }
             }
@@ -58,7 +57,44 @@ export function GameProvider(props){
         }else{
             pieceAndPosition.selected = false
         }
+        console.log(pieceAndPosition)
         setPieceAndPosition(pieceAndPosition)
+        if(pieceAndPosition.piece != '')
+        movesForPiece(pieceAndPosition)
+    }
+
+    function movesForPiece(pieceAndPosition){
+
+        const id = pieceAndPosition.id
+        let piece = pieceAndPosition.piece.substring(5)
+        
+        switch(piece){
+            
+            case piece = 'Rook':
+                const Rook = board.filter(square => square.id.substring(0, 1) == id.substring(0, 1) || square.id.substring(1, 2) == id.substring(1, 2))
+                console.log(Rook)
+
+                for (let index = 0; index < Rook.length; index++) {
+                    const element = Rook[index];
+                    
+                    document.getElementById(element.id).children[0].classList.remove('hidden')
+                }
+
+            break;
+        
+            case piece = 'Pawn':
+                
+            break;
+
+            default:
+                break;
+        }
+        
+
+        
+
+        
+
     }
     
     return(
